@@ -5,7 +5,7 @@ public class NonSubscribersPassengers extends Passenger {
 
     public NonSubscribersPassengers(String name, String iD, boolean discountCoupon) {
         super(name, iD);
-        this.discountCoupon = discountCoupon;
+        setDiscountCoupon(discountCoupon);
     }
 
     public boolean isDiscountCoupon() {
@@ -13,7 +13,7 @@ public class NonSubscribersPassengers extends Passenger {
     }
 
     public void setDiscountCoupon(boolean discountCoupon) {
-        this.discountCoupon = discountCoupon;
+        this.discountCoupon = discountCoupon; //TODO how to check for a boolean that is not set?
     }
 
     @Override
@@ -35,7 +35,7 @@ public class NonSubscribersPassengers extends Passenger {
 
     @Override
     public void displayPassengerInformation() {
-        System.out.println("Non-Subscribed Passenger: "+super.getName()+" with ID: "+super.getiD()+"," +
+        System.out.println("Non-Subscribed Passenger: "+super.getName()+" with ID: "+super.getID()+"," +
                 " has reserved a car with code: "+super.getReservedCar().getCode()+" " +
                 "with a max capacity of "+super.getReservedCar().getMaxCapacity()+" passengers");
 

@@ -6,9 +6,13 @@ public class Car {
     private int maxCapacity; //number of passengers
 
     public Car(Route fixedRout, String code, int maxCapacity) {
-        this.fixedRout = fixedRout;
-        this.code = code;
-        this.maxCapacity = maxCapacity;
+        if (fixedRout == null) {
+            throw new IllegalArgumentException("The route can not be empty, where are the passengers going to go?");
+        } else {
+            this.fixedRout = fixedRout;
+        }
+        setCode(code);
+        setMaxCapacity(maxCapacity);
     }
 
     public String getCode() {
@@ -16,6 +20,9 @@ public class Car {
     }
 
     public void setCode(String code) {
+        if (code.isBlank()) {
+            throw new IllegalArgumentException("Code can not be empty");
+        }
         this.code = code;
     }
 
@@ -28,6 +35,10 @@ public class Car {
     }
 
     public void setMaxCapacity(int maxCapacity) {
+        if (maxCapacity <= 0) {
+            throw new IllegalArgumentException("Car max capacity of passengers can not be zero or less, " +
+                    "where are the passengers going to sit?");
+        }
         this.maxCapacity = maxCapacity;
     }
 }

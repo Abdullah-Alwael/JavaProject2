@@ -26,7 +26,7 @@ public class SubscribersPassengers extends Passenger {
 
     @Override
     public void displayPassengerInformation() {
-        System.out.println("Subscribed Passenger: "+super.getName()+" with ID: "+super.getiD()+"," +
+        System.out.println("Subscribed Passenger: "+super.getName()+" with ID: "+super.getID()+"," +
                 " has reserved a car with code: "+super.getReservedCar().getCode()+" " +
                 "with a max capacity of "+super.getReservedCar().getMaxCapacity()+" passengers");
 
