@@ -13,7 +13,8 @@ public class NonSubscribersPassengers extends Passenger {
     }
 
     public void setDiscountCoupon(boolean discountCoupon) {
-        this.discountCoupon = discountCoupon; //TODO how to check for a boolean that is not set?
+        this.discountCoupon = discountCoupon; // how to check for a boolean that is not set?, by using the Boolean class
+        // due to it being a checked exception, it is better not to change it to Boolean. It will not compile anyway.
     }
 
     @Override

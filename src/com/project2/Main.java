@@ -18,7 +18,7 @@ public class Main {
 
             List<Passenger> passengers = new ArrayList<>();
             passengers.add(new SubscribersPassengers("Abdullah", "9001"));
-            passengers.add(new NonSubscribersPassengers("Ahmed", "8001", true));
+            passengers.add(new NonSubscribersPassengers("Ahmed", "8001", null));
 
             passengers.getFirst().reserveCar(NisanS2000);
             passengers.get(1).reserveCar(DodgeChallenger); // will throw an exception due to capacity <= 0
