@@ -17,7 +17,7 @@ public class NonSubscribersPassengers extends Passenger {
     }
 
     @Override
-    public double reserveCar(Car car) throws IllegalArgumentException {
+    public void reserveCar(Car car) throws IllegalArgumentException {
         if (car.getMaxCapacity() <=0){
             throw new IllegalArgumentException("Car max capacity of passengers can not be zero or less, " +
                     "where are the passengers going to sit?");
@@ -31,7 +31,6 @@ public class NonSubscribersPassengers extends Passenger {
             super.setTripCost(car.getFixedRout().getTripPrice());
         }
 
-        return super.getTripCost();
     }
 
     @Override
@@ -50,5 +49,6 @@ public class NonSubscribersPassengers extends Passenger {
         System.out.println("The trip will start from: "+super.getReservedCar().getFixedRout().getStartAddress());
         System.out.println("And will end at: "+super.getReservedCar().getFixedRout().getDestinationAddress());
         System.out.println("The original trip price: "+super.getReservedCar().getFixedRout().getTripPrice());
+        System.out.println();
     }
 }

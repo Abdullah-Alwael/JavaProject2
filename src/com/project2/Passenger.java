@@ -43,7 +43,7 @@ public abstract class Passenger {
         this.reservedCar = reservedCar;
     }
 
-    public abstract double reserveCar(Car car);
+    public abstract void reserveCar(Car car) throws IllegalArgumentException ;
 
 
     public abstract void displayPassengerInformation();
