@@ -12,13 +12,13 @@ public class Main {
                     , 36.8);
 
             Car DodgeChallenger = new Car(r1, "1000", 0); // MaxCapacity = 0 as requested
-//            Car DodgeChallenger = new Car(r1, "1000", 4);
+//            Car DodgeChallenger = new Car(r1, "1000", 4); // when replacing the above with this one, it runs well
 
             Car NisanS2000 = new Car(r2, "1001", 7);
 
             List<Passenger> passengers = new ArrayList<>();
             passengers.add(new SubscribersPassengers("Abdullah", "9001"));
-            passengers.add(new NonSubscribersPassengers("Ahmed", "8001", null));
+            passengers.add(new NonSubscribersPassengers("Ahmed", "8001", true));
 
             passengers.getFirst().reserveCar(NisanS2000);
             passengers.get(1).reserveCar(DodgeChallenger); // will throw an exception due to capacity <= 0
